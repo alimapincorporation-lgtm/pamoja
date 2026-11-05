@@ -1,0 +1,20 @@
+/* Shared stylised map (sample/illustrative; interactive Google Maps arrives with the maps integration) */
+.map-land{fill:var(--map-land)} .map-park{fill:var(--map-park)} .map-water{fill:var(--map-water)}
+.map-road path{fill:none;stroke:var(--map-road);stroke-width:7;stroke-linecap:round}
+.map-road-edge path{fill:none;stroke:var(--map-road-edge);stroke-width:10;stroke-linecap:round}
+.map-route{fill:none;stroke:var(--green-600);stroke-width:3;stroke-dasharray:2 7;stroke-linecap:round}
+[data-theme="dark"] .map-route{stroke:var(--gold-400)}
+.pin-hotel{fill:var(--green-600);stroke:#fff;stroke-width:3}
+.pin-stadium{fill:var(--gold-500);stroke:var(--ink);stroke-width:3}
+.pin-attr{fill:var(--info);stroke:#fff;stroke-width:3}
+.pin-dot{fill:#fff}
+.map-text{font:600 11px var(--font-body);fill:var(--map-label);paint-order:stroke;stroke:var(--map-land);stroke-width:3px}
+
+.map-pin-num{font:700 11px var(--font-body);fill:#fff;text-anchor:middle}
+.map-pin-num.on-gold{fill:var(--ink)}
+.mapbox{position:relative;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;background:var(--map-land)}
+.mapbox>svg{display:block;width:100%;height:auto;aspect-ratio:10/7}
+.map-legend{display:grid;gap:8px;padding:12px;background:var(--surface);border-top:1px solid var(--border);font-size:var(--fs-sm)}
+.map-legend li{display:flex;gap:10px;align-items:center;justify-content:space-between}
+.map-legend .num{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--green-600);color:#fff;font-size:11px;font-weight:700;flex:none}
+.map-note{padding:8px 12px;font-size:var(--fs-xs);color:var(--text-muted);background:var(--surface-2);border-top:1px solid var(--border)}

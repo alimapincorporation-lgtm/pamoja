@@ -1,0 +1,26 @@
+/* Tailwind-default breakpoints: sm 640, md 768, lg 1024, xl 1280, 2xl 1536 (mobile-first). */
+@media (min-width:640px){
+  :root{--gutter:20px}
+  .header-actions .desktop-only.sm-up{display:inline-flex}
+  .footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:768px){
+  :root{--gutter:24px}
+  .section{padding-block:var(--space-16)}
+  .footer-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (min-width:1024px){
+  :root{--gutter:32px}
+  .section{padding-block:var(--space-20)}
+  .section-head h2{font-size:var(--fs-4xl)}
+  .footer-grid{grid-template-columns:1.4fr repeat(3,1fr)}
+}
+@media (min-width:1280px){
+  :root{--header-h:76px}
+  .menu-btn,.nav-extra{display:none}
+  .primary-nav{position:static;display:block;background:none;border:0;padding:0;max-height:none;overflow:visible}
+  .primary-nav ul{display:flex;gap:2px}
+  .primary-nav a{padding:8px 9px;font-size:var(--fs-sm);white-space:nowrap}
+  .header-actions .desktop-only{display:inline-flex}
+}
+@media (min-width:1536px){ .section{padding-block:var(--space-24)} }

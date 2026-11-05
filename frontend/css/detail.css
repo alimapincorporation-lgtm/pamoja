@@ -1,0 +1,54 @@
+.detail-hero{padding-bottom:var(--space-10)}
+.detail-hero .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:var(--space-3)}
+.detail-hero .res-meta{color:var(--on-brand-2);font-size:var(--fs-sm);margin-top:var(--space-2)}
+.detail-layout{display:grid;gap:var(--space-6)}
+.detail-main{display:grid;gap:var(--space-6);min-width:0}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:var(--space-5);box-shadow:var(--shadow-card)}
+.panel h2{font-size:var(--fs-xl);margin-bottom:var(--space-3)}
+.panel p{color:var(--text-2)}
+.gallery{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:8px;aspect-ratio:16/7}
+.gallery .res-media{aspect-ratio:auto;border-radius:var(--radius-md)}
+.gallery .res-media:first-child{grid-row:span 2}
+.gallery-note{font-size:var(--fs-xs);color:var(--text-muted);margin-top:8px}
+.facts{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}
+.fact{background:var(--surface-2);border-radius:var(--radius-md);padding:10px 12px;font-size:var(--fs-sm)}
+.fact span{display:block;font-size:var(--fs-xs);color:var(--text-muted)}
+.chip-list{display:flex;flex-wrap:wrap;gap:8px}
+.chip-list .tag{font-size:var(--fs-sm);padding:5px 12px}
+.room-list{display:grid;gap:10px}
+.room-item{display:grid;gap:8px;border:1px solid var(--border);border-radius:var(--radius-md);padding:12px 14px;background:var(--surface)}
+.room-item h3{font-size:var(--fs-base)}
+.room-item .sub{font-size:var(--fs-xs);color:var(--text-muted)}
+.room-top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
+.timeline{display:grid;gap:14px;list-style:none;position:relative;padding-left:26px}
+.timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;border-left:2px dashed var(--border-strong)}
+.timeline li{position:relative}.timeline li::before{content:"";position:absolute;left:-24px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--green-600);border:2px solid var(--surface)}
+.timeline h3{font-size:var(--fs-base)}.timeline p{font-size:var(--fs-sm)}
+.menu-list{display:grid;gap:8px;list-style:none}
+.menu-list li{display:flex;gap:8px;align-items:baseline}
+.menu-list li::after{content:"";order:2;flex:1;border-bottom:1px dotted var(--border-strong);margin-top:12px}
+.menu-list span:last-child{order:3;font-weight:600}
+.two-lists{display:grid;gap:var(--space-4)}
+.two-lists ul{list-style:none;display:grid;gap:6px;font-size:var(--fs-sm);color:var(--text-2)}
+.two-lists li{display:flex;gap:8px}.two-lists .icon{margin-top:3px;width:1em;height:1em;color:var(--green-600)}
+.two-lists .no .icon{color:var(--danger)}
+.detail-aside{display:grid;gap:var(--space-4);align-content:start}
+.aside-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:var(--space-5);box-shadow:var(--shadow-card);display:grid;gap:12px}
+.aside-card .price{font-family:var(--font-display);font-size:var(--fs-2xl);font-weight:700}
+.aside-card .price small{font-family:var(--font-body);font-size:var(--fs-sm);font-weight:400;color:var(--text-muted)}
+.aside-card .btn{width:100%}
+.aside-link{font-size:var(--fs-sm);color:var(--link);text-decoration:underline;text-align:center}
+.location-meta{font-size:var(--fs-sm);color:var(--text-2);display:grid;gap:4px;margin-bottom:var(--space-3)}
+@media (min-width:640px){.facts{grid-template-columns:repeat(4,1fr)}.two-lists{grid-template-columns:1fr 1fr}}
+@media (min-width:1024px){
+  .detail-layout{grid-template-columns:1fr 340px;align-items:start}
+  .detail-aside{position:sticky;top:calc(var(--header-h) + 16px)}
+}
+
+.live-map{display:grid;gap:12px}
+.live-frame{position:relative;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;background:var(--surface-2);aspect-ratio:16/10;max-height:440px}
+.live-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:1}
+.live-wait{position:absolute;inset:0;display:grid;place-items:center;color:var(--text-muted);font-size:var(--fs-sm)}
+.route-row{display:flex;flex-wrap:wrap;gap:8px}
+.route-row .input{flex:1 1 220px}
+.route-row .btn-sm{min-height:44px}

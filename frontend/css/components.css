@@ -1,0 +1,28 @@
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 22px;border-radius:var(--radius-pill);font-weight:600;font-size:var(--fs-sm);line-height:1.2;border:1px solid transparent;transition:background-color .15s,border-color .15s,transform .05s;white-space:nowrap}
+.btn:active{transform:translateY(1px)}
+.btn[disabled],.btn[aria-disabled="true"]{opacity:.55;pointer-events:none}
+.btn-primary{background:var(--btn-primary-bg);color:var(--btn-primary-text)} .btn-primary:hover{background:var(--btn-primary-hover)}
+.btn-accent{background:var(--btn-accent-bg);color:var(--btn-accent-text)} .btn-accent:hover{background:var(--btn-accent-hover)}
+.btn-light{background:var(--btn-light-bg);color:var(--btn-light-text)} .btn-light:hover{background:var(--btn-light-hover)}
+.btn-outline-light{border-color:var(--brand-border);color:var(--on-brand);background:rgba(255,255,255,.06)} .btn-outline-light:hover{background:rgba(255,255,255,.14)}
+.btn-outline{border-color:var(--border-strong);color:var(--text);background:transparent} .btn-outline:hover{background:var(--surface-2)}
+.btn-link{color:var(--on-brand);padding-inline:12px;min-height:44px;display:inline-flex;align-items:center;font-weight:500;font-size:var(--fs-sm);white-space:nowrap} .btn-link:hover{text-decoration:underline}
+.btn-sm{min-height:36px;padding:6px 14px;font-size:var(--fs-xs)}
+
+/* Cards, badges */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-card);padding:var(--space-6)}
+.icon-tile{width:44px;height:44px;border-radius:var(--radius-md);display:grid;place-items:center;background:var(--brand-soft);color:var(--brand-soft-text)}
+.icon-tile .icon{width:22px;height:22px}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:var(--radius-pill);font-size:var(--fs-xs);font-weight:600;line-height:1.4}
+.badge-ok{background:var(--ok-bg);color:var(--ok-text)}
+.badge-warn{background:var(--warn-bg);color:var(--warn-text)}
+.badge-info{background:var(--info-bg);color:var(--info-text)}
+.badge-neutral{background:var(--surface-2);color:var(--text-2)}
+.badge-placeholder{background:var(--accent-soft);color:var(--accent-soft-text)}
+.badge::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+
+/* Toast */
+.toast-region{position:fixed;left:0;right:0;bottom:16px;display:grid;justify-items:center;gap:8px;z-index:200;pointer-events:none;padding-inline:16px}
+.toast{pointer-events:auto;background:var(--gray-900);color:#fff;padding:12px 18px;border-radius:var(--radius-md);box-shadow:var(--shadow-pop);font-size:var(--fs-sm);max-width:440px}
+[data-theme="dark"] .toast{background:var(--surface-3)}

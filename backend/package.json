@@ -1,0 +1,17 @@
+{
+  "name": "afcon-pamoja-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AFCON PAMOJA API: modular monolith (identity, organisations, business onboarding, enquiries, audit). No third-party runtime dependencies.",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/server.js",
+    "migrate": "node --disable-warning=ExperimentalWarning scripts/migrate.js",
+    "create-admin": "node --disable-warning=ExperimentalWarning scripts/create-admin.js",
+    "dev-data": "node --disable-warning=ExperimentalWarning scripts/dev-data.js",
+    "test": "node --disable-warning=ExperimentalWarning --test tests/*.test.js"
+  }
+}

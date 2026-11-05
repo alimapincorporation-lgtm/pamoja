@@ -1,0 +1,35 @@
+/* Semantic tokens. Light is the default; dark is applied via data-theme="dark" (set by js/core/theme.js). */
+:root, [data-theme="light"] {
+  color-scheme: light;
+  --bg:var(--gray-50); --surface:var(--white); --surface-2:var(--gray-100); --surface-3:var(--gray-200);
+  --text:var(--gray-900); --text-2:var(--gray-600); --text-muted:var(--gray-500);
+  --border:var(--gray-200); --border-strong:var(--gray-300);
+  --brand:var(--green-800); --brand-deep:var(--green-950); --on-brand:#fff; --on-brand-2:#D1E7D7; --brand-border:rgba(255,255,255,.22);
+  --brand-soft:var(--green-50); --brand-soft-text:var(--green-800);
+  --accent:var(--gold-500); --on-accent:var(--ink); --accent-soft:var(--gold-100); --accent-soft-text:#6b5200;
+  --btn-primary-bg:var(--green-700); --btn-primary-text:#fff; --btn-primary-hover:var(--green-800);
+  --btn-accent-bg:var(--gold-500); --btn-accent-text:var(--ink); --btn-accent-hover:var(--gold-600);
+  --btn-light-bg:#fff; --btn-light-text:var(--green-800); --btn-light-hover:var(--green-50);
+  --focus:var(--green-500); --focus-on-brand:var(--gold-400);
+  --link:var(--green-700);
+  --shadow-card:var(--shadow-soft); --shadow-pop:var(--shadow-floating);
+  --map-land:#EEF2EA; --map-park:#D6EBD3; --map-water:#CFE3F1; --map-road:#fff; --map-road-edge:#D9DED5; --map-label:#4B5563;
+  --ok-bg:#E3F4EA; --ok-text:#055A38; --warn-bg:#FDEFD6; --warn-text:#8A3A04; --info-bg:#E4EDFD; --info-text:#134AA8;
+}
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg:#071A11; --surface:#0B2418; --surface-2:#103321; --surface-3:#163D29;
+  --text:var(--gray-50); --text-2:var(--gray-300); --text-muted:var(--gray-400);
+  --border:#244A35; --border-strong:#35664A;
+  --brand:var(--green-950); --brand-deep:#021c10; --on-brand:#fff; --on-brand-2:var(--green-100); --brand-border:rgba(255,255,255,.2);
+  --brand-soft:#123A27; --brand-soft-text:var(--green-100);
+  --accent:var(--gold-500); --on-accent:var(--ink); --accent-soft:var(--gold-950); --accent-soft-text:var(--gold-200);
+  --btn-primary-bg:var(--bright-green); --btn-primary-text:var(--green-950); --btn-primary-hover:var(--green-400);
+  --btn-accent-bg:var(--gold-500); --btn-accent-text:var(--ink); --btn-accent-hover:var(--gold-400);
+  --btn-light-bg:var(--gold-500); --btn-light-text:var(--ink); --btn-light-hover:var(--gold-400);
+  --focus:var(--green-400); --focus-on-brand:var(--gold-400);
+  --link:var(--green-300);
+  --shadow-card:0 8px 24px rgba(0,0,0,.20); --shadow-pop:0 18px 48px rgba(0,0,0,.45);
+  --map-land:#0F2D1F; --map-park:#14402B; --map-water:#123A52; --map-road:#1E4A33; --map-road-edge:#2B5E43; --map-label:#B7C9BE;
+  --ok-bg:#0E3A26; --ok-text:#8FE0B5; --warn-bg:#3F2A0B; --warn-text:#F5C77A; --info-bg:#112B57; --info-text:#A9C6FF;
+}

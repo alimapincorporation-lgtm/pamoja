@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI assistant — AFCON PAMOJA</title>
+  <meta name="description" content="Ask the assistant to find hotels, tours, transport and stadium information.">
+  <meta name="theme-color" content="#064F2A">
+  <link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../assets/icons/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap">
+  <script>(function(){var t=null;try{t=localStorage.getItem("pamoja-theme")}catch(e){}if(!t&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)t="dark";document.documentElement.setAttribute("data-theme",t||"light");})();</script>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/themes.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/forms.css">
+  <link rel="stylesheet" href="../../css/map.css">
+  <link rel="stylesheet" href="../../css/listing.css">
+  <link rel="stylesheet" href="../../css/detail.css">
+  <link rel="stylesheet" href="../../css/chat.css">
+  <link rel="stylesheet" href="../../css/competition.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+</head>
+<body data-page="ai" data-base="../../">
+<div data-slot="header"></div>
+<main id="main">
+<section class="page-hero"><div class="container"><ol class="crumbs" aria-label="Breadcrumb"><li><a href="../../index.html">Home</a></li><li aria-current="page">AI assistant</li></ol><h1>AI assistant</h1><p>Ask in plain language. Answers use platform listings and show when they were last updated.</p></div></section>
+<div class="container page-body"><div class="ai-layout"><div data-mount="assistant"></div>
+<aside class="panel" aria-label="About the assistant"><h2>How it works</h2><div class="info-list">
+<div class="info-item"><i data-icon="shield-check"></i><div><h3>Test build</h3><p>Replies come from sample listings, not a live AI model.</p></div></div>
+<div class="info-item"><i data-icon="check"></i><div><h3>No invented facts</h3><p>It only reports what is in the data and says when something is missing or out of date.</p></div></div>
+<div class="info-item"><i data-icon="calendar"></i><div><h3>Not a booking</h3><p>A recommendation is never a booking. Availability is checked again before you confirm.</p></div></div>
+<div class="info-item"><i data-icon="message"></i><div><h3>Talk to a person</h3><p><a href="contact.html" style="text-decoration:underline">Contact support</a> for complaints, disputes or anything urgent.</p></div></div>
+</div></aside></div></div>
+</main>
+<div data-slot="footer"></div>
+<script src="../../js/core/config.js"></script>
+<script src="../../js/core/icons.js"></script>
+<script src="../../js/core/error-handler.js"></script>
+<script src="../../js/core/notifications.js"></script>
+<script src="../../js/core/theme.js"></script>
+<script src="../../js/components/layout.js"></script>
+<script src="../../js/core/router-utils.js"></script>
+<script src="../../js/core/validation.js"></script>
+<script src="../../js/core/api-client.js"></script>
+<script src="../../js/services/sample-data.js"></script>
+<script src="../../js/components/ui.js"></script>
+<script src="../../js/components/map-view.js"></script>
+<script src="../../js/components/cards.js"></script>
+<script src="../../js/components/enquiry.js"></script>
+<script src="../../js/components/listing.js"></script>
+<script src="../../js/components/detail.js"></script>
+<script src="../../js/components/stadium.js"></script>
+<script src="../../js/components/assistant.js"></script>
+<script src="../../js/components/competition.js"></script>
+<script src="../../js/core/auth.js"></script>
+<script src="../../js/components/mount.js"></script>
+<script src="../../js/core/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AFCON PAMOJA — Football, travel and local services across East Africa</title>
+  <meta name="description" content="Discover destinations, find accommodation, connect with local businesses, find your way around stadiums and plan your journey across Uganda, Kenya and Tanzania.">
+  <meta name="theme-color" content="#064F2A">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap">
+  <script>
+    /* Apply saved/system theme before first paint to avoid a flash. */
+    (function(){var t=null;try{t=localStorage.getItem("pamoja-theme")}catch(e){}
+    if(!t&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)t="dark";
+    document.documentElement.setAttribute("data-theme",t||"light");})();
+  </script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/map.css">
+  <link rel="stylesheet" href="css/listing.css">
+  <link rel="stylesheet" href="css/detail.css">
+  <link rel="stylesheet" href="css/chat.css">
+  <link rel="stylesheet" href="css/competition.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+</head>
+<body data-page="home" data-base="">
+
+<!-- Shared map drawing reused by the previews below (illustrative, not a real map) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="pamoja-map" viewBox="0 0 400 280">
+    <rect class="map-land" width="400" height="280"/>
+    <path class="map-park" d="M14 34c40-24 96-14 116 22s-12 62-62 62S-8 78 14 34z"/>
+    <path class="map-water" d="M262 206c32-34 88-24 138 4v70H246c-18-30-8-52 16-74z"/>
+    <path class="map-park" d="M300 20c30-14 70 0 80 28s-30 40-62 34-44-44-18-62z"/>
+    <g class="map-road-edge"><path d="M-10 152C76 140 160 172 240 132S350 82 410 92"/><path d="M112-10c10 74 40 142 30 300"/><path d="M-10 234c96-22 176-10 268-62"/></g>
+    <g class="map-road"><path d="M-10 152C76 140 160 172 240 132S350 82 410 92"/><path d="M112-10c10 74 40 142 30 300"/><path d="M-10 234c96-22 176-10 268-62"/></g>
+    <path class="map-route" d="M122 190C168 160 206 150 258 112"/>
+    <circle class="pin-hotel" cx="122" cy="190" r="10"/><circle class="pin-dot" cx="122" cy="190" r="3.5"/>
+    <circle class="pin-hotel" cx="64" cy="118" r="10"/><circle class="pin-dot" cx="64" cy="118" r="3.5"/>
+    <circle class="pin-hotel" cx="300" cy="176" r="10"/><circle class="pin-dot" cx="300" cy="176" r="3.5"/>
+    <circle class="pin-attr" cx="338" cy="58" r="10"/><circle class="pin-dot" cx="338" cy="58" r="3.5"/>
+    <circle class="pin-stadium" cx="258" cy="112" r="15"/><circle class="pin-dot" cx="258" cy="112" r="5"/>
+    <text class="map-text" x="278" y="108">Stadium</text>
+    <text class="map-text" x="136" y="206">Hotel</text>
+  </symbol>
+</svg>
+
+<div data-slot="header"></div>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container">
+      <div class="hero-copy">
+        <span class="hero-pill">FOOTBALL • TOURISM • TRAVEL • EXPERIENCE</span>
+        <h1 id="hero-title">Your Gateway to Football, Travel &amp; Unforgettable Experiences</h1>
+        <p>Discover destinations, find accommodation, connect with local businesses, navigate stadiums, and plan your journey with intelligent assistance.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="#discover">Explore PAMOJA <i data-icon="arrow-right"></i></a>
+          <a class="btn btn-outline-light" href="pages/public/ai-assistant.html">Plan My Journey</a>
+        </div>
+      </div>
+
+      <div class="preview">
+        <div class="frame" role="group" aria-label="Interface preview using sample data">
+          <div class="frame-bar" aria-hidden="true">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <div class="frame-search"><i data-icon="search"></i><span>Hotels near the stadium, under UGX 200,000 a night</span></div>
+          </div>
+          <div class="frame-body">
+            <div class="pane">
+              <div class="pane-title">Near the stadium</div>
+              <div class="mini">
+                <span class="icon-tile"><i data-icon="stadium"></i></span>
+                <div><h3>Sample Stadium</h3><p>Entrances, facilities and parking</p><span class="badge badge-info">Venue information</span></div>
+              </div>
+              <div class="mini">
+                <span class="icon-tile"><i data-icon="bed"></i></span>
+                <div><h3>Kintu Court Hotel</h3><p>UGX 150,000 / night · 2 km</p><span class="badge badge-ok">Available · confirm before booking</span></div>
+              </div>
+              <div class="mini">
+                <span class="icon-tile"><i data-icon="bed"></i></span>
+                <div><h3>Lakeside Guest House</h3><p>UGX 120,000 / night · 4 km</p><span class="badge badge-warn">Availability last updated 3 days ago</span></div>
+              </div>
+            </div>
+            <div class="map"><svg viewBox="0 0 400 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#pamoja-map" width="400" height="280"/></svg></div>
+            <div class="pane pane-side">
+              <div class="pane-title">Ask PAMOJA</div>
+              <div class="bubble bubble-user">Find an available hotel near the stadium within my budget.</div>
+              <div class="bubble bubble-ai">I found 2 options. Availability is checked again before any booking.</div>
+              <div class="mini"><span class="icon-tile"><i data-icon="car"></i></span><div><h3>Airport transfer</h3><p>Request a quote from a provider</p><span class="badge badge-neutral">Quote request</span></div></div>
+              <div class="mini"><span class="icon-tile"><i data-icon="mountain"></i></span><div><h3>Day tour</h3><p>Itinerary and inclusions</p><span class="badge badge-neutral">Enquire</span></div></div>
+            </div>
+          </div>
+          <div class="frame-note">Interface preview · sample data. Names, prices and availability are illustrative.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISCOVER -->
+  <section class="section discover" id="discover" aria-labelledby="discover-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="discover-title">Everything You Need for Your Journey</h2>
+        <p>Explore football experiences, discover local destinations, and connect with services across the region.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card feature-card">
+          <span class="icon-tile"><i data-icon="ball"></i></span>
+          <h3>Football &amp; Stadiums</h3>
+          <p>Discover authorised football information, participating venues, match-related information, stadium facilities, and visitor guidance.</p>
+        </article>
+        <article class="card feature-card is-featured">
+          <span class="icon-tile"><i data-icon="bed"></i></span>
+          <h3>Travel &amp; Accommodation</h3>
+          <p>Explore hotels, transport services, tour packages, restaurants, and tourist destinations.</p>
+        </article>
+        <article class="card feature-card">
+          <span class="icon-tile"><i data-icon="store"></i></span>
+          <h3>Businesses &amp; Experiences</h3>
+          <p>Connect with participating businesses, review services, send enquiries, and request bookings.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWCASE -->
+  <section class="section" style="padding-top:0" id="plan" aria-labelledby="plan-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="plan-title">Plan Smarter with PAMOJA</h2>
+        <p>One place to compare options, see where they are and get in touch.</p>
+      </div>
+      <div class="grid grid-2">
+
+        <article class="card show-card">
+          <div class="show-preview" aria-hidden="true">
+            <div class="bubble bubble-user">My hotel is full. What else is nearby?</div>
+            <div class="bubble bubble-ai">Two other hotels fit your budget. Check availability before you book.</div>
+            <div class="row"><span class="badge badge-ok">Available</span><span class="badge badge-warn">Needs a fresh check</span></div>
+          </div>
+          <h3>AI-Powered Recommendations</h3>
+          <p>Recommend alternative hotels when a selected hotel is full, using actual platform availability and visitor preferences.</p>
+        </article>
+
+        <article class="card show-card">
+          <div class="show-preview" aria-hidden="true" style="padding:0">
+            <div class="map" style="min-height:176px"><svg viewBox="0 0 400 280" preserveAspectRatio="xMidYMid slice"><use href="#pamoja-map" width="400" height="280"/></svg></div>
+          </div>
+          <h3>Explore with Maps</h3>
+          <p>Display verified business and stadium locations with clear directions links.</p>
+        </article>
+
+        <article class="card show-card">
+          <div class="show-preview" aria-hidden="true">
+            <div class="room"><span><b>Double room</b>UGX 150,000 / night</span><span class="badge badge-ok">Available</span></div>
+            <div class="room"><span><b>Family room</b>UGX 210,000 / night</span><span class="badge badge-warn">Request to book</span></div>
+            <div class="progress"><i class="done">Enquiry</i><i class="done">Pending</i><i>Confirmed</i></div>
+          </div>
+          <h3>Accommodation &amp; Bookings</h3>
+          <p>Show room options, pricing, availability status, and booking progress.</p>
+        </article>
+
+        <article class="card show-card">
+          <div class="show-preview" aria-hidden="true">
+            <ul class="steps">
+              <li><b>Airport</b>Pick-up point</li>
+              <li><b>Hotel</b>Drop-off and check-in</li>
+              <li><b>Stadium</b>Match-day return trip</li>
+            </ul>
+          </div>
+          <h3>Transport &amp; Trip Planning</h3>
+          <p>Help visitors compare participating transport providers and plan journeys between hotels, stadiums, and destinations.</p>
+        </article>
+
+        <article class="card show-card">
+          <div class="show-preview" aria-hidden="true">
+            <div class="tiles">
+              <span class="tile"><span class="icon-tile"><i data-icon="mountain"></i></span>Attractions</span>
+              <span class="tile"><span class="icon-tile"><i data-icon="route"></i></span>Tours</span>
+              <span class="tile"><span class="icon-tile"><i data-icon="utensils"></i></span>Restaurants</span>
+            </div>
+          </div>
+          <h3>Tourism &amp; Local Discovery</h3>
+          <p>Highlight attractions, tours, restaurants, and approved local experiences.</p>
+        </article>
+
+        <article class="card show-card">
+          <div class="show-preview" aria-hidden="true">
+            <div class="contact-grid">
+              <span class="fake-btn"><i data-icon="phone"></i>Call now</span>
+              <span class="fake-btn"><i data-icon="message"></i>WhatsApp</span>
+              <span class="fake-btn"><i data-icon="send"></i>Send enquiry</span>
+              <span class="fake-btn is-primary"><i data-icon="calendar"></i>Book now</span>
+            </div>
+          </div>
+          <h3>Business Connections</h3>
+          <p>Allow visitors to call businesses, open WhatsApp, send enquiries, or use an available booking flow.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP + AI -->
+  <section class="section ask" id="ask" aria-labelledby="ask-title">
+    <div class="container ask-grid">
+      <div class="ask-copy">
+        <h2 id="ask-title">Ask where to stay, then see how to get there</h2>
+        <p>Tell the assistant your budget, dates and the stadium you’re visiting. It searches participating hotels and shows them on the map.</p>
+        <ul class="checks">
+          <li><i data-icon="check"></i><span>Uses platform availability and shows when it was last updated.</span></li>
+          <li><i data-icon="check"></i><span>Says so when availability or prices are missing or out of date.</span></li>
+          <li><i data-icon="check"></i><span>A recommendation is not a booking. Availability is checked again before you confirm.</span></li>
+          <li><i data-icon="check"></i><span>Directions open in Google Maps once the destination’s location has been verified.</span></li>
+        </ul>
+        <a class="btn btn-primary" href="pages/public/ai-assistant.html">Try the assistant <i data-icon="sparkles"></i></a>
+      </div>
+
+      <div class="frame" role="group" aria-label="Assistant and map preview using sample data">
+        <div class="map"><svg viewBox="0 0 400 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#pamoja-map" width="400" height="280"/></svg></div>
+        <div class="pane">
+          <div class="bubble bubble-user">Find an available hotel near the stadium within my budget.</div>
+          <div class="bubble bubble-ai">Here are two sample matches under UGX 200,000 a night.</div>
+          <div class="mini">
+            <span class="icon-tile"><i data-icon="bed"></i></span>
+            <div><h3>Kintu Court Hotel</h3><p>UGX 150,000 / night · about 2 km · price checked today</p>
+              <div class="row"><span class="badge badge-ok">Available · confirm before booking</span><span class="fake-btn"><i data-icon="map-pin"></i>Get directions</span></div></div>
+          </div>
+          <div class="mini">
+            <span class="icon-tile"><i data-icon="bed"></i></span>
+            <div><h3>Lakeside Guest House</h3><p>UGX 120,000 / night · about 4 km</p>
+              <div class="row"><span class="badge badge-warn">Availability not recently updated</span><span class="fake-btn">Send enquiry</span></div></div>
+          </div>
+        </div>
+        <div class="frame-note">AI-assisted · sample data. Names, prices and distances are illustrative.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSINESSES -->
+  <section class="section" id="businesses" aria-labelledby="biz-title">
+    <div class="container">
+      <div class="band on-brand">
+        <div>
+          <h2 id="biz-title">Be found by visitors when they’re planning</h2>
+          <p>Alimap creates and verifies your profile. You then manage your services, prices and availability from your own dashboard.</p>
+          <ul class="checks">
+            <li><i data-icon="check"></i><span>Receive calls, WhatsApp messages, enquiries and booking requests.</span></li>
+            <li><i data-icon="check"></i><span>Update prices, hours and availability yourself, from your phone.</span></li>
+            <li><i data-icon="shield-check"></i><span>Verified status is shown only after Alimap has checked your details.</span></li>
+          </ul>
+          <a class="btn btn-accent" href="pages/public/contact.html">List Your Business</a>
+        </div>
+        <div>
+          <div class="cat-grid">
+            <div class="cat"><i data-icon="bed"></i>Hotels &amp; stays</div>
+            <div class="cat"><i data-icon="car"></i>Transport</div>
+            <div class="cat"><i data-icon="route"></i>Tour operators</div>
+            <div class="cat"><i data-icon="utensils"></i>Restaurants</div>
+            <div class="cat"><i data-icon="store"></i>Retail &amp; services</div>
+            <div class="cat"><i data-icon="mountain"></i>Attractions</div>
+          </div>
+          <small>Category icons only. Partner logos are shown only with written permission.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANS -->
+  <section class="section" style="padding-top:0" id="plans" aria-labelledby="plans-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="plans-title">Business plans</h2>
+        <p>Choose the level of support that fits your business.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card plan">
+          <span class="badge badge-placeholder">Placeholder</span>
+          <h3>Starter</h3>
+          <p class="price">Price to be confirmed</p>
+          <ul>
+            <li><i data-icon="check"></i>Public business profile</li>
+            <li><i data-icon="check"></i>Call, WhatsApp and enquiry buttons</li>
+            <li><i data-icon="check"></i>Enquiries in your dashboard</li>
+          </ul>
+          <a class="btn btn-outline" href="pages/public/contact.html">Talk to Alimap</a>
+        </article>
+        <article class="card plan is-featured">
+          <span class="badge badge-placeholder">Placeholder</span>
+          <h3>Growth</h3>
+          <p class="price">Price to be confirmed</p>
+          <ul>
+            <li><i data-icon="check"></i>Everything in Starter</li>
+            <li><i data-icon="check"></i>Availability and booking tools</li>
+            <li><i data-icon="check"></i>Performance reports</li>
+          </ul>
+          <a class="btn btn-accent" href="pages/public/contact.html">Talk to Alimap</a>
+        </article>
+        <article class="card plan">
+          <span class="badge badge-placeholder">Placeholder</span>
+          <h3>Premium</h3>
+          <p class="price">Price to be confirmed</p>
+          <ul>
+            <li><i data-icon="check"></i>Everything in Growth</li>
+            <li><i data-icon="check"></i>Sponsored placement, clearly labelled</li>
+            <li><i data-icon="check"></i>Priority onboarding support</li>
+          </ul>
+          <a class="btn btn-outline" href="pages/public/contact.html">Talk to Alimap</a>
+        </article>
+      </div>
+      <p class="fineprint">Plan names, prices and benefits are placeholders until Alimap approves them.</p>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section voices" aria-labelledby="voices-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="voices-title">What visitors and businesses say</h2>
+        <p>Approved testimonials will appear here. The cards below are sample content.</p>
+      </div>
+      <div class="grid grid-3">
+        <figure class="card voice"><blockquote>“Sample text: I could compare hotels near the stadium and see which ones had rooms.”</blockquote><footer><span>Visitor</span><span class="badge badge-placeholder">Placeholder</span></footer></figure>
+        <figure class="card voice"><blockquote>“Sample text: Enquiries arrive in one dashboard, so nothing gets lost in chat threads.”</blockquote><footer><span>Hotel owner</span><span class="badge badge-placeholder">Placeholder</span></footer></figure>
+        <figure class="card voice"><blockquote>“Sample text: The directions link took me straight to the right entrance.”</blockquote><footer><span>Football fan</span><span class="badge badge-placeholder">Placeholder</span></footer></figure>
+        <figure class="card voice"><blockquote>“Sample text: Quote requests come with pickup, date and passenger numbers already filled in.”</blockquote><footer><span>Transport operator</span><span class="badge badge-placeholder">Placeholder</span></footer></figure>
+        <figure class="card voice"><blockquote>“Sample text: I updated our menu and opening hours myself, without calling anyone.”</blockquote><footer><span>Restaurant manager</span><span class="badge badge-placeholder">Placeholder</span></footer></figure>
+        <figure class="card voice"><blockquote>“Sample text: Planning stops for the weekend took minutes instead of an evening.”</blockquote><footer><span>Tour traveller</span><span class="badge badge-placeholder">Placeholder</span></footer></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="cta" aria-labelledby="cta-title">
+    <div class="container">
+      <div class="cta-panel on-brand">
+        <h2 id="cta-title">Your Next Experience Starts Here</h2>
+        <p>Discover destinations, connect with services, and make your journey easier with AFCON PAMOJA.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="#discover">Start Exploring</a>
+          <a class="btn btn-outline-light" href="pages/public/contact.html">List Your Business</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-slot="footer"></div>
+
+<script src="js/core/config.js"></script>
+<script src="js/core/icons.js"></script>
+<script src="js/core/error-handler.js"></script>
+<script src="js/core/notifications.js"></script>
+<script src="js/core/theme.js"></script>
+<script src="js/components/layout.js"></script>
+<script src="js/core/router-utils.js"></script>
+<script src="js/core/validation.js"></script>
+<script src="js/core/api-client.js"></script>
+<script src="js/services/sample-data.js"></script>
+<script src="js/components/ui.js"></script>
+<script src="js/components/map-view.js"></script>
+<script src="js/components/cards.js"></script>
+<script src="js/components/enquiry.js"></script>
+<script src="js/components/listing.js"></script>
+<script src="js/components/detail.js"></script>
+<script src="js/components/stadium.js"></script>
+<script src="js/components/assistant.js"></script>
+<script src="js/components/competition.js"></script>
+<script src="js/core/auth.js"></script>
+<script src="js/components/mount.js"></script>
+<script src="js/core/app.js"></script>
+<script src="js/pages/home.js"></script>
+</body>
+</html>
